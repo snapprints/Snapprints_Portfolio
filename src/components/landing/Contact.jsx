@@ -32,7 +32,7 @@ export default function Contact({ onDemoClick }) {
                 <Mail className="text-sky-400" />
                 <div>
                   <h4 className="font-semibold">Email</h4>
-                  <p className="text-slate-400">hello@snapprint.in</p>
+                  <p className="text-slate-400">support.snapprints@gmail.com</p>
                 </div>
               </div>
 
@@ -40,7 +40,7 @@ export default function Contact({ onDemoClick }) {
                 <Phone className="text-sky-400" />
                 <div>
                   <h4 className="font-semibold">Phone</h4>
-                  <p className="text-slate-400">+91 XXXXX XXXXX</p>
+                  <p className="text-slate-400">+91 7798305769</p>
                 </div>
               </div>
 
@@ -48,7 +48,7 @@ export default function Contact({ onDemoClick }) {
                 <MapPin className="text-sky-400" />
                 <div>
                   <h4 className="font-semibold">Location</h4>
-                  <p className="text-slate-400">Navi Mumbai, Maharashtra, India</p>
+                  <p className="text-slate-400">Ahilyanagar, Maharashtra, India</p>
                 </div>
               </div>
             </div>

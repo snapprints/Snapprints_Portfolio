@@ -45,9 +45,9 @@ export default function Footer() {
         <div>
           <h4 className="font-semibold text-lg mb-5">Contact</h4>
           <ul className="space-y-3 text-slate-400">
-            <li>📧 hello@snapprint.in</li>
-            <li>📞 +91 XXXXX XXXXX</li>
-            <li>📍 Navi Mumbai</li>
+            <li>📧 support.snapprints@gmail.com</li>
+            <li>📞 +91 7798305769</li>
+            <li>📍 Ahilyanagar</li>
           </ul>
         </div>
       </div>
