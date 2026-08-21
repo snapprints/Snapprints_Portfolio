@@ -38,8 +38,8 @@ export default function Navbar({ onDemoClick }) {
           <img
             src="/Snapprints.png"
             alt="SnapPrint Logo"
-            width={50}
-            height={50}
+            width={68}
+            height={68}
             className="rounded-lg w-9 h-9 sm:w-[50px] sm:h-[50px]"
           />
           <div>
