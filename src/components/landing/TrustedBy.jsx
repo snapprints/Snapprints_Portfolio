@@ -67,7 +67,7 @@ export default function TrustedBy() {
           <p className="text-sky-400 uppercase tracking-[0.2em] sm:tracking-[0.3em] font-semibold text-xs sm:text-sm">Ideal For</p>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mt-3 sm:mt-4">Designed for Every Modern Workspace</h2>
           <p className="text-slate-400 max-w-2xl mx-auto mt-4 sm:mt-6 text-base sm:text-lg">
-            SnapPrint is built for institutions and businesses that need fast, secure and self-service document
+            SnapPrints is built for institutions and businesses that need fast, secure and self-service document
             printing.
           </p>
         </Reveal>

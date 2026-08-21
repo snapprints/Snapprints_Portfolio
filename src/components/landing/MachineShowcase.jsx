@@ -96,7 +96,7 @@ export default function MachineShowcase() {
           <div className="absolute w-64 h-64 sm:w-96 sm:h-96 rounded-full bg-sky-500/20 blur-[100px] sm:blur-[120px]" />
           <img
             src="/images/machine.png"
-            alt="SnapPrint Machine"
+            alt="SnapPrints Machine"
             className="relative w-52 sm:w-72 md:w-96 lg:w-[420px] h-auto drop-shadow-[0_0_40px_rgba(14,165,233,0.35)] animate-float"
           />
         </motion.div>
@@ -115,7 +115,7 @@ export default function MachineShowcase() {
             <span className="text-sky-400"> Future of Printing</span>
           </h2>
           <p className="mt-6 sm:mt-8 text-slate-400 text-base sm:text-lg leading-7 sm:leading-8">
-            SnapPrint is an intelligent self-service printing kiosk that enables users to upload documents, pay
+            SnapPrints is an intelligent self-service printing kiosk that enables users to upload documents, pay
             digitally and print instantly without any human assistance.
           </p>
 

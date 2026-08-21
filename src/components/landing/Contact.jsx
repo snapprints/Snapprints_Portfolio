@@ -80,7 +80,7 @@ export default function Contact({ onDemoClick }) {
                   <span className="text-sky-400"> Printing?</span>
                 </h2>
                 <p className="mt-6 sm:mt-8 text-slate-400 text-base sm:text-lg leading-7 sm:leading-8">
-                  Whether you&apos;re a college, office, hospital or public organization, SnapPrint can provide a fast
+                  Whether you&apos;re a college, office, hospital or public organization, SnapPrints can provide a fast
                   and secure self-service printing solution.
                 </p>
                 <motion.button

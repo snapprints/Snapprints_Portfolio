@@ -49,7 +49,7 @@ import { motion } from "framer-motion";
 import Reveal from "./Reveal";
 
 const steps = [
-  { icon: ScanLine, title: "Scan QR Code", description: "Scan the QR code displayed on the SnapPrint kiosk using your mobile phone." },
+  { icon: ScanLine, title: "Scan QR Code", description: "Scan the QR code displayed on the SnapPrints kiosk using your mobile phone." },
   { icon: UploadCloud, title: "Upload Document", description: "Upload PDF, DOCX, PPT, images and other supported document formats." },
   { icon: CreditCard, title: "Make Payment", description: "Pay securely using UPI, Debit Card, Credit Card or Wallet." },
   { icon: Printer, title: "Collect Print", description: "Your document is printed instantly. Collect it directly from the machine." },
@@ -63,7 +63,7 @@ export default function HowItWorks() {
           <p className="text-sky-400 uppercase tracking-[0.25em] sm:tracking-[0.35em] font-semibold text-xs sm:text-sm">How It Works</p>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mt-4 sm:mt-5">Print in Just 4 Simple Steps</h2>
           <p className="text-slate-400 mt-4 sm:mt-6 max-w-3xl mx-auto text-base sm:text-lg leading-7 sm:leading-8">
-            SnapPrint makes document printing quick, secure and completely contactless. From scanning a QR code to
+            SnapPrints makes document printing quick, secure and completely contactless. From scanning a QR code to
             collecting your print, everything takes less than a minute.
           </p>
         </Reveal>
