@@ -36,7 +36,7 @@ export default function Navbar({ onDemoClick }) {
         {/* Logo */}
         <div className="flex items-center gap-2 sm:gap-3 cursor-pointer" onClick={closeMenu}>
           <img
-            src="/images/logo.png"
+            src="/Snapprints.png"
             alt="SnapPrint Logo"
             width={50}
             height={50}
