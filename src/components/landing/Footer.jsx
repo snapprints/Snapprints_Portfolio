@@ -6,10 +6,10 @@ export default function Footer() {
         {/* Logo */}
         <div className="col-span-2 sm:col-span-2 md:col-span-1">
           <div className="flex items-center gap-3">
-            <img src="/images/logo.png" alt="SnapPrints" width={45} height={45} className="w-9 h-9 sm:w-[45px] sm:h-[45px]" />
+            <img src="/images/Snapprint-logo.png" alt="SnapPrints" width={45} height={45} className="w-9 h-9 sm:w-[45px] sm:h-[45px]" />
             <div>
               <h3 className="text-xl sm:text-2xl font-bold">
-                Snap<span className="text-sky-400">Print</span>
+                Snap<span className="text-sky-400">Prints</span>
               </h3>
               <p className="text-[10px] sm:text-xs uppercase tracking-[0.2em] sm:tracking-[0.25em] text-slate-400">Smart Printing</p>
             </div>
