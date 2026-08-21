@@ -11,7 +11,7 @@ export default function Footer() {
               <h3 className="text-xl sm:text-2xl font-bold">
                 Snap<span className="text-sky-400">Prints</span>
               </h3>
-              <p className="text-[10px] sm:text-xs uppercase tracking-[0.2em] sm:tracking-[0.25em] text-slate-400">Smart Printing</p>
+              <p className="text-[8px] sm:text-xs uppercase tracking-[0.2em] sm:tracking-[0.25em] text-slate-400">Print Anytime Anywhere</p>
             </div>
           </div>
           <p className="text-slate-400 mt-4 sm:mt-6 leading-6 sm:leading-7 text-sm sm:text-base">
