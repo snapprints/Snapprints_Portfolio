@@ -1,7 +1,7 @@
 {
-  "name": "SnapPrints Dashboard",
+  "name": "SnapPrints",
   "short_name": "SnapPrints",
-  "description": "Vendor and Admin dashboard for SnapPrints kiosks",
+  "description": " SnapPrints Portfoilo",
   "start_url": "/login",
   "display": "standalone",
   "background_color": "#f9fafb",
@@ -9,12 +9,12 @@
   "orientation": "portrait-primary",
   "icons": [
     {
-      "src": "/icon-192.png",
+      "src": "/logo-icon.png",
       "sizes": "192x192",
       "type": "image/png"
     },
     {
-      "src": "/icon-512.png",
+      "src": "/logo-icon.png",
       "sizes": "512x512",
       "type": "image/png"
     }
