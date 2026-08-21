@@ -44,10 +44,10 @@ export default function Navbar({ onDemoClick }) {
           />
           <div>
             <h1 className="text-lg sm:text-2xl font-bold tracking-tight text-white">
-              Snap<span className="text-sky-400">Print</span>
+              Snap<span className="text-sky-400">Prints</span>
             </h1>
             <p className="hidden sm:block text-[11px] uppercase tracking-[0.25em] text-slate-400">
-              Smart Printing
+              Print Anytime Anywhere
             </p>
           </div>
         </div>
