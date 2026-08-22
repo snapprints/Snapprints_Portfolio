@@ -1,7 +1,6 @@
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect } from "react";
 import { X, ArrowLeft, Rocket, MapPin, Building2, Check } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Country, State, City } from "country-state-city";
 
 const API_BASE = import.meta.env.VITE_API_BASE || "http://localhost:5000/api";
 
@@ -107,17 +106,32 @@ export default function DemoModal({ open, onClose }) {
     message: "",
   });
 
+  // country-state-city bundles a genuinely large worldwide city dataset.
+  // Dynamically importing it (instead of a static top-of-file import) means
+  // Vite splits it into its own chunk that's only downloaded and parsed
+  // when someone actually opens this modal — not baked into the main page
+  // bundle that every visitor has to load and parse on every page view.
+  const [csc, setCsc] = useState(null);
+
+  useEffect(() => {
+    if (open && !csc) {
+      import("country-state-city").then((mod) => {
+        setCsc({ Country: mod.Country, State: mod.State, City: mod.City });
+      });
+    }
+  }, [open, csc]);
+
   const countries = useMemo(
-    () => (open ? Country.getAllCountries() : []),
-    [open]
+    () => (csc ? csc.Country.getAllCountries() : []),
+    [csc]
   );
   const states = useMemo(
-    () => (open && countryIso ? State.getStatesOfCountry(countryIso) : []),
-    [open, countryIso]
+    () => (csc && countryIso ? csc.State.getStatesOfCountry(countryIso) : []),
+    [csc, countryIso]
   );
   const cities = useMemo(
-    () => (open && countryIso && stateIso ? City.getCitiesOfState(countryIso, stateIso) : []),
-    [open, countryIso, stateIso]
+    () => (csc && countryIso && stateIso ? csc.City.getCitiesOfState(countryIso, stateIso) : []),
+    [csc, countryIso, stateIso]
   );
 
   if (!open) return null;
@@ -376,7 +390,8 @@ export default function DemoModal({ open, onClose }) {
                     />
 
                     <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4">
-                      <select value={countryIso} onChange={handleCountryChange} className={inputClass}>
+                      <select value={countryIso} onChange={handleCountryChange} className={inputClass} disabled={!csc}>
+                        {!csc && <option>Loading countries…</option>}
                         {countries.map((c) => (
                           <option key={c.isoCode} value={c.isoCode}>
                             {c.name}
@@ -384,8 +399,8 @@ export default function DemoModal({ open, onClose }) {
                         ))}
                       </select>
 
-                      <select value={stateIso} onChange={handleStateChange} className={inputClass}>
-                        <option value="">Select State</option>
+                      <select value={stateIso} onChange={handleStateChange} className={inputClass} disabled={!csc}>
+                        <option value="">{csc ? "Select State" : "Loading…"}</option>
                         {states.map((s) => (
                           <option key={s.isoCode} value={s.isoCode}>
                             {s.name}
@@ -393,8 +408,8 @@ export default function DemoModal({ open, onClose }) {
                         ))}
                       </select>
 
-                      <select value={form.city} onChange={handleCityChange} className={inputClass}>
-                        <option value="">Select City</option>
+                      <select value={form.city} onChange={handleCityChange} className={inputClass} disabled={!csc}>
+                        <option value="">{csc ? "Select City" : "Loading…"}</option>
                         {cities.map((c) => (
                           <option key={`${c.name}-${c.latitude}-${c.longitude}`} value={c.name}>
                             {c.name}
