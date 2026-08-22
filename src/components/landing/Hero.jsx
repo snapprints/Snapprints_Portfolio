@@ -138,7 +138,7 @@ export default function Hero({ onDemoClick }) {
             className="mt-6 sm:mt-8 text-base sm:text-lg text-slate-300 leading-7 sm:leading-8 max-w-xl mx-auto lg:mx-0"
           >
             Upload documents from your phone, pay securely using UPI, and collect your prints instantly from the
-            SnapPrints kiosk.
+            Snapprints kiosk.
           </motion.p>
 
           <motion.div
@@ -190,7 +190,7 @@ export default function Hero({ onDemoClick }) {
           <div className="absolute w-56 h-56 sm:w-80 sm:h-80 bg-sky-500/20 rounded-full blur-[100px] sm:blur-[120px]" />
           <img
             src="/images/machine.png"
-            alt="SnapPrints Machine"
+            alt="Snapprints Machine"
             className="relative w-48 sm:w-64 md:w-80 lg:w-[430px] h-auto drop-shadow-[0_0_40px_rgba(14,165,233,0.5)] animate-float"
           />
         </motion.div>

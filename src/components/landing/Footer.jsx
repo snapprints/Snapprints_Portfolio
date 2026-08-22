@@ -6,10 +6,10 @@ export default function Footer() {
         {/* Logo */}
         <div className="col-span-2 sm:col-span-2 md:col-span-1">
           <div className="flex items-center gap-3">
-            <img src="/images/Snapprint-logo.png" alt="SnapPrints" width={45} height={45} className="w-9 h-9 sm:w-[45px] sm:h-[45px]" />
+            <img src="Snapprints.png" alt="Snapprints" width={45} height={45} className="w-9 h-9 sm:w-[45px] sm:h-[45px]" />
             <div>
               <h3 className="text-xl sm:text-2xl font-bold">
-                Snap<span className="text-sky-400">Prints</span>
+                Snap<span className="text-sky-400">prints</span>
               </h3>
               <p className="text-[8px] sm:text-xs uppercase tracking-[0.2em] sm:tracking-[0.25em] text-slate-400">Print Anytime Anywhere</p>
             </div>
@@ -54,7 +54,7 @@ export default function Footer() {
       </div>
 
       <div className="border-t border-slate-800 py-4 sm:py-6 text-center text-slate-500 text-xs sm:text-sm px-4">
-        © 2026 SnapPrints. All Rights Reserved.
+        © 2026 Snapprints. All Rights Reserved.
       </div>
     </footer>
   );

@@ -37,14 +37,14 @@ export default function Navbar({ onDemoClick }) {
         <div className="flex items-center gap-2 sm:gap-3 cursor-pointer" onClick={closeMenu}>
           <img
             src="/Snapprints.png"
-            alt="SnapPrint Logo"
+            alt="Snapprint Logo"
             width={68}
             height={68}
             className="rounded-lg w-9 h-9 sm:w-[50px] sm:h-[50px]"
           />
           <div>
             <h1 className="text-lg sm:text-2xl font-bold tracking-tight text-white">
-              Snap<span className="text-sky-400">Prints</span>
+              Snap<span className="text-sky-400">prints</span>
             </h1>
             <p className="hidden sm:block text-[11px] uppercase tracking-[0.25em] text-slate-400">
               Print Anytime Anywhere

@@ -67,7 +67,7 @@ export default function Features() {
           <p className="text-sky-400 uppercase tracking-[0.25em] sm:tracking-[0.35em] font-semibold text-xs sm:text-sm">Features</p>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mt-4 sm:mt-5">Everything You Need in One Smart Kiosk</h2>
           <p className="text-slate-400 max-w-3xl mx-auto mt-4 sm:mt-6 text-base sm:text-lg">
-            SnapPrints combines secure document handling, instant printing, digital payments and cloud connectivity
+            Snapprints combines secure document handling, instant printing, digital payments and cloud connectivity
             into one intelligent self-service solution.
           </p>
         </Reveal>
