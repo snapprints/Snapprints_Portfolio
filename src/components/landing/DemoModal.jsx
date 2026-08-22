@@ -1,174 +1,3 @@
-// import { useState } from "react";
-// import { X } from "lucide-react";
-
-// const API_BASE = import.meta.env.VITE_API_BASE || "http://localhost:5000/api";
-
-// export default function DemoModal({ open, onClose }) {
-//   const [loading, setLoading] = useState(false);
-//   const [success, setSuccess] = useState(false);
-//   const [error, setError] = useState("");
-
-//   const [form, setForm] = useState({
-//     name: "",
-//     company: "",
-//     email: "",
-//     phone: "",
-//     city: "",
-//     organization: "",
-//     message: "",
-//   });
-
-//   if (!open) return null;
-
-//   const handleChange = (e) => {
-//     setForm({ ...form, [e.target.name]: e.target.value });
-//   };
-
-//   const handleSubmit = async (e) => {
-//     e.preventDefault();
-//     setLoading(true);
-//     setError("");
-
-//     try {
-//       const response = await fetch(`${API_BASE}/request-demo`, {
-//         method: "POST",
-//         headers: { "Content-Type": "application/json" },
-//         body: JSON.stringify(form),
-//       });
-
-//       if (!response.ok) throw new Error("Unable to send request.");
-
-//       setSuccess(true);
-//       setForm({ name: "", company: "", email: "", phone: "", city: "", organization: "", message: "" });
-//     } catch {
-//       setError("Something went wrong. Please try again.");
-//     }
-
-//     setLoading(false);
-//   };
-
-//   return (
-//     <div className="fixed inset-0 z-[100] bg-brand-900/60 backdrop-blur-sm flex items-center justify-center p-3 sm:p-6">
-//       <div className="bg-white rounded-2xl sm:rounded-3xl border border-slate-200 max-w-xl w-full p-5 sm:p-8 relative max-h-[90vh] overflow-y-auto shadow-2xl shadow-brand-900/20">
-//         <button onClick={onClose} className="absolute right-4 top-4 sm:right-5 sm:top-5 text-slate-400 hover:text-brand-900">
-//           <X />
-//         </button>
-
-//         <h2 className="text-2xl sm:text-3xl font-bold text-brand-900 pr-8">Request Demo</h2>
-//         <p className="text-slate-500 mt-2 sm:mt-3 mb-6 sm:mb-8 text-sm sm:text-base">Fill the details below and our team will contact you.</p>
-
-//         {success ? (
-//           <div className="text-center py-6 sm:py-10">
-//             <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-full bg-green-100 flex items-center justify-center mx-auto">
-//               <span className="text-4xl sm:text-5xl">✅</span>
-//             </div>
-//             <h2 className="text-2xl sm:text-3xl font-bold mt-6 sm:mt-8 text-brand-900">Thank You!</h2>
-//             <p className="text-slate-500 mt-4 sm:mt-5 leading-7 sm:leading-8 text-sm sm:text-base">
-//               Your demo request has been submitted successfully.
-//               <br />
-//               Our team will contact you shortly.
-//             </p>
-//             <button
-//               onClick={onClose}
-//               className="mt-8 sm:mt-10 bg-brand-500 text-white px-8 py-3.5 sm:py-4 rounded-xl font-semibold hover:bg-brand-600"
-//             >
-//               Close
-//             </button>
-//           </div>
-//         ) : (
-//           <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-5">
-//             <input
-//               required
-//               name="name"
-//               placeholder="Full Name"
-//               value={form.name}
-//               onChange={handleChange}
-//               className="w-full rounded-xl bg-brand-50 border border-slate-200 p-3.5 sm:p-4 text-brand-900 placeholder-slate-400 text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-brand-400 focus:border-transparent"
-//             />
-
-//             <input
-//               required
-//               name="company"
-//               placeholder="Company / College"
-//               value={form.company}
-//               onChange={handleChange}
-//               className="w-full rounded-xl bg-brand-50 border border-slate-200 p-3.5 sm:p-4 text-brand-900 placeholder-slate-400 text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-brand-400 focus:border-transparent"
-//             />
-
-//             <input
-//               required
-//               type="email"
-//               name="email"
-//               placeholder="Email"
-//               value={form.email}
-//               onChange={handleChange}
-//               className="w-full rounded-xl bg-brand-50 border border-slate-200 p-3.5 sm:p-4 text-brand-900 placeholder-slate-400 text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-brand-400 focus:border-transparent"
-//             />
-
-//             <input
-//               required
-//               type="tel"
-//               name="phone"
-//               pattern="[0-9]{10}"
-//               maxLength={10}
-//               placeholder="Phone Number"
-//               value={form.phone}
-//               onChange={handleChange}
-//               className="w-full rounded-xl bg-brand-50 border border-slate-200 p-3.5 sm:p-4 text-brand-900 placeholder-slate-400 text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-brand-400 focus:border-transparent"
-//             />
-
-//             <input
-//               required
-//               name="city"
-//               placeholder="City"
-//               value={form.city}
-//               onChange={handleChange}
-//               className="w-full rounded-xl bg-brand-50 border border-slate-200 p-3.5 sm:p-4 text-brand-900 placeholder-slate-400 text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-brand-400 focus:border-transparent"
-//             />
-
-//             <select
-//               required
-//               name="organization"
-//               value={form.organization}
-//               onChange={handleChange}
-//               className="w-full rounded-xl bg-brand-50 border border-slate-200 p-3.5 sm:p-4 text-brand-900 text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-brand-400 focus:border-transparent"
-//             >
-//               <option value="">Organization Type</option>
-//               <option>College</option>
-//               <option>Corporate</option>
-//               <option>Hospital</option>
-//               <option>Library</option>
-//               <option>Government</option>
-//               <option>Other</option>
-//             </select>
-
-//             <textarea
-//               rows={4}
-//               name="message"
-//               placeholder="Message"
-//               value={form.message}
-//               onChange={handleChange}
-//               className="w-full rounded-xl bg-brand-50 border border-slate-200 p-3.5 sm:p-4 text-brand-900 placeholder-slate-400 text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-brand-400 focus:border-transparent"
-//             />
-
-//             {error && (
-//               <div className="rounded-lg bg-red-50 border border-red-200 p-3 text-red-600 text-sm">
-//                 {error}
-//               </div>
-//             )}
-
-//             <button
-//               disabled={loading}
-//               className="w-full rounded-xl bg-brand-500 text-white py-3.5 sm:py-4 font-semibold transition hover:bg-brand-600 disabled:opacity-60 disabled:cursor-not-allowed"
-//             >
-//               {loading ? "Submitting..." : "Request Demo"}
-//             </button>
-//           </form>
-//         )}
-//       </div>
-//     </div>
-//   );
-// }
 import { useState, useMemo } from "react";
 import { X, ArrowLeft, Rocket, MapPin, Building2, Check } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -278,14 +107,17 @@ export default function DemoModal({ open, onClose }) {
     message: "",
   });
 
-  const countries = useMemo(() => Country.getAllCountries(), []);
+  const countries = useMemo(
+    () => (open ? Country.getAllCountries() : []),
+    [open]
+  );
   const states = useMemo(
-    () => (countryIso ? State.getStatesOfCountry(countryIso) : []),
-    [countryIso]
+    () => (open && countryIso ? State.getStatesOfCountry(countryIso) : []),
+    [open, countryIso]
   );
   const cities = useMemo(
-    () => (countryIso && stateIso ? City.getCitiesOfState(countryIso, stateIso) : []),
-    [countryIso, stateIso]
+    () => (open && countryIso && stateIso ? City.getCitiesOfState(countryIso, stateIso) : []),
+    [open, countryIso, stateIso]
   );
 
   if (!open) return null;
