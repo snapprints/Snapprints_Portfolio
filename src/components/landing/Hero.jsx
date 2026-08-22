@@ -98,7 +98,7 @@ export default function Hero({ onDemoClick }) {
         >
           <div className="absolute w-56 h-56 sm:w-80 sm:h-80 bg-brand-200/30 rounded-full blur-[100px] sm:blur-[120px]" />
           <img
-            src="/images/machine.png"
+            src="/Snapprints_machine.png"
             alt="SnapPrints Machine"
             className="relative w-48 sm:w-64 md:w-80 lg:w-[430px] h-auto drop-shadow-[0_0_40px_rgba(19,107,255,0.25)] animate-float"
           />
