@@ -28,8 +28,8 @@ export default function Navbar({ onDemoClick }) {
       className={
         "fixed top-0 left-0 w-full z-50 backdrop-blur-xl transition-all duration-300 " +
         (scrolled
-          ? "bg-slate-950/90 border-b border-white/10 shadow-lg shadow-black/20"
-          : "bg-slate-950/40 border-b border-transparent")
+          ? "bg-white/90 border-b border-slate-200 shadow-lg shadow-slate-900/5"
+          : "bg-white/40 border-b border-transparent")
       }
     >
       <div className="max-w-7xl mx-auto flex h-16 sm:h-20 items-center justify-between px-4 sm:px-6">
@@ -37,16 +37,16 @@ export default function Navbar({ onDemoClick }) {
         <div className="flex items-center gap-2 sm:gap-3 cursor-pointer" onClick={closeMenu}>
           <img
             src="/Snapprints.png"
-            alt="Snapprint Logo"
+            alt="SnapPrints Logo"
             width={68}
             height={68}
             className="rounded-lg w-9 h-9 sm:w-[50px] sm:h-[50px]"
           />
           <div>
-            <h1 className="text-lg sm:text-2xl font-bold tracking-tight text-white">
-              Snap<span className="text-sky-400">prints</span>
+            <h1 className="text-lg sm:text-2xl font-bold tracking-tight text-brand-900">
+              Snap<span className="text-brand-500">Prints</span>
             </h1>
-            <p className="hidden sm:block text-[11px] uppercase tracking-[0.25em] text-slate-400">
+            <p className="hidden sm:block text-[11px] uppercase tracking-[0.25em] text-slate-500">
               Print Anytime Anywhere
             </p>
           </div>
@@ -54,17 +54,17 @@ export default function Navbar({ onDemoClick }) {
 
         {/* Desktop Navigation */}
         <div className="hidden lg:flex items-center gap-10">
-          <a href="#" className="relative text-white font-medium transition hover:text-sky-400">
+          <a href="#" className="relative text-brand-900 font-medium transition hover:text-brand-600">
             Home
-            <span className="absolute -bottom-2 left-0 h-[2px] w-full bg-sky-400"></span>
+            <span className="absolute -bottom-2 left-0 h-[2px] w-full bg-brand-500"></span>
           </a>
-          <a href="#features" className="font-medium text-slate-300 transition hover:text-sky-400">
+          <a href="#features" className="font-medium text-slate-600 transition hover:text-brand-600">
             Features
           </a>
-          <a href="#how" className="font-medium text-slate-300 transition hover:text-sky-400">
+          <a href="#how" className="font-medium text-slate-600 transition hover:text-brand-600">
             How It Works
           </a>
-          <a href="#contact" className="font-medium text-slate-300 transition hover:text-sky-400">
+          <a href="#contact" className="font-medium text-slate-600 transition hover:text-brand-600">
             Contact
           </a>
         </div>
@@ -73,7 +73,7 @@ export default function Navbar({ onDemoClick }) {
         <div className="hidden lg:flex items-center gap-3">
           <Link
             to="/login"
-            className="flex items-center rounded-xl border border-slate-700 px-5 py-3 font-semibold text-slate-200 transition hover:border-sky-400 hover:text-sky-400"
+            className="flex items-center rounded-xl border border-slate-300 px-5 py-3 font-semibold text-slate-700 transition hover:border-brand-400 hover:text-brand-600"
           >
             Login
           </Link>
@@ -81,7 +81,7 @@ export default function Navbar({ onDemoClick }) {
             whileHover={{ scale: 1.04 }}
             whileTap={{ scale: 0.97 }}
             onClick={onDemoClick}
-            className="flex items-center rounded-xl bg-sky-500 px-6 py-3 font-semibold text-white shadow-lg shadow-sky-500/40 transition-colors hover:bg-sky-400"
+            className="flex items-center rounded-xl bg-brand-500 px-6 py-3 font-semibold text-white shadow-lg shadow-brand-500/30 transition-colors hover:bg-brand-600"
           >
             Request Demo
           </motion.button>
@@ -89,7 +89,7 @@ export default function Navbar({ onDemoClick }) {
 
         {/* Mobile Hamburger */}
         <button
-          className="lg:hidden text-white p-2 -mr-2"
+          className="lg:hidden text-brand-900 p-2 -mr-2"
           onClick={() => setMobileOpen((v) => !v)}
           aria-label={mobileOpen ? "Close menu" : "Open menu"}
         >
@@ -105,22 +105,22 @@ export default function Navbar({ onDemoClick }) {
             animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
             transition={{ duration: 0.25, ease: "easeInOut" }}
-            className="lg:hidden overflow-hidden border-t border-white/10 bg-slate-950/95 backdrop-blur-xl"
+            className="lg:hidden overflow-hidden border-t border-slate-200 bg-white/95 backdrop-blur-xl"
           >
             <div className="flex flex-col px-4 py-4 gap-1">
               {navLinks.map(function (item) {
                 return (
-                  <a key={item.label} href={item.href} onClick={closeMenu} className="text-slate-200 font-medium py-3 px-2 rounded-lg transition hover:bg-white/5 hover:text-sky-400">
+                  <a key={item.label} href={item.href} onClick={closeMenu} className="text-slate-700 font-medium py-3 px-2 rounded-lg transition hover:bg-brand-50 hover:text-brand-600">
                     {item.label}
                   </a>
                 );
               })}
 
-              <div className="flex flex-col gap-3 mt-3 pt-3 border-t border-white/10">
+              <div className="flex flex-col gap-3 mt-3 pt-3 border-t border-slate-200">
                 <Link
                   to="/login"
                   onClick={closeMenu}
-                  className="text-center rounded-xl border border-slate-700 px-5 py-3 font-semibold text-slate-200 transition hover:border-sky-400 hover:text-sky-400"
+                  className="text-center rounded-xl border border-slate-300 px-5 py-3 font-semibold text-slate-700 transition hover:border-brand-400 hover:text-brand-600"
                 >
                   Login
                 </Link>
@@ -129,7 +129,7 @@ export default function Navbar({ onDemoClick }) {
                     closeMenu();
                     onDemoClick();
                   }}
-                  className="rounded-xl bg-sky-500 px-6 py-3 font-semibold text-white transition hover:bg-sky-400"
+                  className="rounded-xl bg-brand-500 px-6 py-3 font-semibold text-white transition hover:bg-brand-600"
                 >
                   Request Demo
                 </button>

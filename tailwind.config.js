@@ -4,17 +4,19 @@ export default {
   theme: {
     extend: {
       colors: {
+        // Brand scale interpolated from white -> #136BFF -> #162B4D (navy).
+        // 500 is your exact bright blue; 900 is your exact navy.
         brand: {
-          50:  "#eef4ff",
-          100: "#d9e6ff",
-          200: "#b3ccff",
-          300: "#80a8ff",
-          400: "#4d7fff",
-          500: "#2457ff",
-          600: "#173fe0",
-          700: "#1231b3",
-          800: "#122a8c",
-          900: "#132670",
+          50:  "#F6F9FF",
+          100: "#E7F0FF",
+          200: "#CBDEFF",
+          300: "#A1C4FF",
+          400: "#639DFF",
+          500: "#136BFF",
+          600: "#145DD8",
+          700: "#144EAF",
+          800: "#153D7F",
+          900: "#162B4D",
         },
       },
     },

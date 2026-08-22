@@ -1,5 +1,5 @@
 {
-  "name": "snapprints-dashboard",
+  "name": "snapprints",
   "private": true,
   "version": "0.1.0",
   "type": "module",
@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "axios": "^1.7.7",
+    "country-state-city": "^3.2.1",
     "framer-motion": "^13.1.1",
     "lucide-react": "^0.383.0",
     "react": "^18.3.1",

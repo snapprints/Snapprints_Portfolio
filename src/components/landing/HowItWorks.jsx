@@ -1,55 +1,9 @@
-
-// import { ScanLine, UploadCloud, CreditCard, Printer } from "lucide-react";
-
-// const steps = [
-//   { icon: ScanLine, title: "Scan QR Code", description: "Scan the QR code displayed on the SnapPrint kiosk using your mobile phone." },
-//   { icon: UploadCloud, title: "Upload Document", description: "Upload PDF, DOCX, PPT, images and other supported document formats." },
-//   { icon: CreditCard, title: "Make Payment", description: "Pay securely using UPI, Debit Card, Credit Card or Wallet." },
-//   { icon: Printer, title: "Collect Print", description: "Your document is printed instantly. Collect it directly from the machine." },
-// ];
-
-// export default function HowItWorks() {
-//   return (
-//     <section id="how" className="bg-gradient-to-b from-slate-900 to-slate-950 py-16 sm:py-28 text-white">
-//       <div className="max-w-7xl mx-auto px-4 sm:px-6">
-//         <div className="text-center mb-12 sm:mb-20">
-//           <p className="text-sky-400 uppercase tracking-[0.25em] sm:tracking-[0.35em] font-semibold text-xs sm:text-sm">How It Works</p>
-//           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mt-4 sm:mt-5">Print in Just 4 Simple Steps</h2>
-//           <p className="text-slate-400 mt-4 sm:mt-6 max-w-3xl mx-auto text-base sm:text-lg leading-7 sm:leading-8">
-//             SnapPrint makes document printing quick, secure and completely contactless. From scanning a QR code to
-//             collecting your print, everything takes less than a minute.
-//           </p>
-//         </div>
-
-//         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
-//           {steps.map((step, index) => (
-//             <div
-//               key={step.title}
-//               className="group relative rounded-2xl sm:rounded-3xl border border-slate-800 bg-slate-900/70 backdrop-blur-sm p-6 sm:p-8 transition-all duration-300 hover:-translate-y-2 hover:border-sky-500 hover:shadow-xl hover:shadow-sky-500/10"
-//             >
-//               <div className="absolute -top-4 left-5 sm:-top-5 sm:left-6 flex h-8 w-8 sm:h-10 sm:w-10 items-center justify-center rounded-full bg-sky-500 font-bold text-white text-sm sm:text-base shadow-lg shadow-sky-500/30">
-//                 {index + 1}
-//               </div>
-//               <div className="mt-3 mb-5 sm:mt-4 sm:mb-6 flex h-12 w-12 sm:h-16 sm:w-16 items-center justify-center rounded-xl sm:rounded-2xl bg-sky-500/10 group-hover:bg-sky-500/20 transition">
-//                 <step.icon size={26} className="text-sky-400 sm:w-[34px] sm:h-[34px]" />
-//               </div>
-//               <h3 className="text-xl sm:text-2xl font-semibold mb-3 sm:mb-4">{step.title}</h3>
-//               <p className="leading-6 sm:leading-7 text-slate-400 text-sm sm:text-base">{step.description}</p>
-//             </div>
-//           ))}
-//         </div>
-//       </div>
-//     </section>
-//   );
-// }
-
-
 import { ScanLine, UploadCloud, CreditCard, Printer } from "lucide-react";
 import { motion } from "framer-motion";
 import Reveal from "./Reveal";
 
 const steps = [
-  { icon: ScanLine, title: "Scan QR Code", description: "Scan the QR code displayed on the Snapprints kiosk using your mobile phone." },
+  { icon: ScanLine, title: "Scan QR Code", description: "Scan the QR code displayed on the SnapPrints kiosk using your mobile phone." },
   { icon: UploadCloud, title: "Upload Document", description: "Upload PDF, DOCX, PPT, images and other supported document formats." },
   { icon: CreditCard, title: "Make Payment", description: "Pay securely using UPI, Debit Card, Credit Card or Wallet." },
   { icon: Printer, title: "Collect Print", description: "Your document is printed instantly. Collect it directly from the machine." },
@@ -57,13 +11,13 @@ const steps = [
 
 export default function HowItWorks() {
   return (
-    <section id="how" className="bg-gradient-to-b from-slate-900 to-slate-950 py-16 sm:py-28 text-white">
+    <section id="how" className="bg-gradient-to-b from-brand-50 to-white py-16 sm:py-28 text-brand-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <Reveal className="text-center mb-12 sm:mb-20">
-          <p className="text-sky-400 uppercase tracking-[0.25em] sm:tracking-[0.35em] font-semibold text-xs sm:text-sm">How It Works</p>
+          <p className="text-brand-500 uppercase tracking-[0.25em] sm:tracking-[0.35em] font-semibold text-xs sm:text-sm">How It Works</p>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mt-4 sm:mt-5">Print in Just 4 Simple Steps</h2>
-          <p className="text-slate-400 mt-4 sm:mt-6 max-w-3xl mx-auto text-base sm:text-lg leading-7 sm:leading-8">
-            Snapprints makes document printing quick, secure and completely contactless. From scanning a QR code to
+          <p className="text-slate-500 mt-4 sm:mt-6 max-w-3xl mx-auto text-base sm:text-lg leading-7 sm:leading-8">
+            SnapPrints makes document printing quick, secure and completely contactless. From scanning a QR code to
             collecting your print, everything takes less than a minute.
           </p>
         </Reveal>
@@ -74,16 +28,16 @@ export default function HowItWorks() {
               <motion.div
                 whileHover={{ y: -8 }}
                 transition={{ type: "spring", stiffness: 300, damping: 20 }}
-                className="group relative h-full rounded-2xl sm:rounded-3xl border border-slate-800 bg-slate-900/70 backdrop-blur-sm p-6 sm:p-8 hover:border-sky-500 hover:shadow-xl hover:shadow-sky-500/10 transition-colors"
+                className="group relative h-full rounded-2xl sm:rounded-3xl border border-slate-200 bg-white backdrop-blur-sm p-6 sm:p-8 hover:border-brand-400 hover:shadow-xl hover:shadow-brand-500/10 transition-colors"
               >
-                <div className="absolute -top-4 left-5 sm:-top-5 sm:left-6 flex h-8 w-8 sm:h-10 sm:w-10 items-center justify-center rounded-full bg-sky-500 font-bold text-white text-sm sm:text-base shadow-lg shadow-sky-500/30">
+                <div className="absolute -top-4 left-5 sm:-top-5 sm:left-6 flex h-8 w-8 sm:h-10 sm:w-10 items-center justify-center rounded-full bg-brand-500 font-bold text-white text-sm sm:text-base shadow-lg shadow-brand-500/30">
                   {index + 1}
                 </div>
-                <div className="mt-3 mb-5 sm:mt-4 sm:mb-6 flex h-12 w-12 sm:h-16 sm:w-16 items-center justify-center rounded-xl sm:rounded-2xl bg-sky-500/10 group-hover:bg-sky-500/20 transition">
-                  <step.icon size={26} className="text-sky-400 sm:w-[34px] sm:h-[34px]" />
+                <div className="mt-3 mb-5 sm:mt-4 sm:mb-6 flex h-12 w-12 sm:h-16 sm:w-16 items-center justify-center rounded-xl sm:rounded-2xl bg-brand-100 group-hover:bg-brand-200 transition">
+                  <step.icon size={26} className="text-brand-600 sm:w-[34px] sm:h-[34px]" />
                 </div>
-                <h3 className="text-xl sm:text-2xl font-semibold mb-3 sm:mb-4">{step.title}</h3>
-                <p className="leading-6 sm:leading-7 text-slate-400 text-sm sm:text-base">{step.description}</p>
+                <h3 className="text-xl sm:text-2xl font-semibold mb-3 sm:mb-4 text-brand-900">{step.title}</h3>
+                <p className="leading-6 sm:leading-7 text-slate-500 text-sm sm:text-base">{step.description}</p>
               </motion.div>
             </Reveal>
           ))}
